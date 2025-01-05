@@ -11,9 +11,7 @@ import { Editor } from "@monaco-editor/react";
 import { EditorPanelSkeleton } from "./EditorPanelSkeleton";
 import ShareSnippetDialog from "./ShareSnippetDialog";
 
-type Props = {};
-
-function EditorPanel({}: Props) {
+function EditorPanel() {
   const clerk = useClerk();
   const [isShareDialogOpen, setIsShareDialogOpen] = useState(false);
   const { language, theme, fontSize, editor, setFontSize, setEditor } =

@@ -1,10 +1,13 @@
 "use client";
 
-import { getExecutionResult, useCodeEditorStore } from "@/store/useCodeEditorStore";
+import {
+  getExecutionResult,
+  useCodeEditorStore,
+} from "@/store/useCodeEditorStore";
 import { useUser } from "@clerk/nextjs";
 import { useMutation } from "convex/react";
 import { motion } from "framer-motion";
-import { Loader2, Play } from 'lucide-react';
+import { Loader2, Play } from "lucide-react";
 import { api } from "../../../../convex/_generated/api";
 import { useCallback } from "react";
 
@@ -46,8 +49,8 @@ function RunButton() {
       `}
       aria-label={isRunning ? "Code is executing" : "Run code"}
     >
-      <div 
-        className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl opacity-100 transition-opacity group-hover:opacity-90" 
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl opacity-100 transition-opacity group-hover:opacity-90"
         aria-hidden="true"
       />
 
@@ -58,11 +61,16 @@ function RunButton() {
               <Loader2 className="w-4 h-4 animate-spin text-white/70" />
               <div className="absolute inset-0 blur animate-pulse" />
             </div>
-            <span className="text-sm font-medium text-white/90 max-md:hidden">Executing...</span>
+            <span className="text-sm font-medium text-white/90 max-md:hidden">
+              Executing...
+            </span>
           </>
         ) : (
           <>
-            <div className="relative flex items-center justify-center" aria-hidden="true">
+            <div
+              className="relative flex items-center justify-center"
+              aria-hidden="true"
+            >
               <Play className="w-4 h-4 text-white/90 transition-transform group-hover:scale-110 group-hover:text-white" />
             </div>
             <span className="text-sm font-medium text-white/90 group-hover:text-white max-md:hidden">
@@ -76,4 +84,3 @@ function RunButton() {
 }
 
 export default RunButton;
-

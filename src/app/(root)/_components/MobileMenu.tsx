@@ -4,10 +4,8 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Menu, Sparkles, X } from 'lucide-react';
-import { SignedIn } from "@clerk/nextjs";
 import ThemeSelector from "./ThemeSelector";
 import LanguageSelector from "./LanguageSelector";
-import RunButton from "./RunButton";
 import HeaderProfileBtn from "./HeaderProfileBtn";
 
 interface MobileMenuProps {
