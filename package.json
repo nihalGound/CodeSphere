@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.9.6",
+    "@clerk/nextjs": "^6.9.9",
     "@monaco-editor/react": "^4.6.0",
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",

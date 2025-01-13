@@ -10,15 +10,19 @@ type Props = {
 };
 
 const Page = async ({ searchParams }: Props) => {
-  const session_id = await searchParams?.session_id;
-  const cancel =await  searchParams?.cancel;
+  // In Next.js 14, searchParams is not actually a Promise
+  // We just need to access it normally
+  const session_id = searchParams.session_id;
+  const cancel = searchParams.cancel;
 
   return (
-    <Suspense fallback={
-      <div className="flex flex-col justify-center items-center h-screen w-full">
-        <h4 className="text-2xl font-bold">Loading...</h4>
-      </div>
-    }>
+    <Suspense 
+      fallback={
+        <div className="flex flex-col justify-center items-center h-screen w-full">
+          <h4 className="text-2xl font-bold">Loading...</h4>
+        </div>
+      }
+    >
       <PaymentClient session_id={session_id} cancel={cancel} />
     </Suspense>
   );
