@@ -1,34 +1,26 @@
 {
-  "name": "code-editor",
+  "name": "code-sphere",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "npm install --legacy-peer-deps",
-    "install": "npm install --legacy-peer-deps"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.9.9",
+    "@clerk/nextjs": "^6.6.0",
     "@monaco-editor/react": "^4.6.0",
-    "axios": "^1.7.9",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "convex": "^1.17.4",
-    "framer-motion": "^11.15.0",
-    "lucide-react": "^0.469.0",
+    "convex": "^1.17.3",
+    "framer-motion": "^11.13.1",
+    "lucide-react": "^0.464.0",
     "next": "15.0.3",
-    "react": "^19.0.0-rc-66855b96-20241106",
-    "react-dom": "^19.0.0-rc-66855b96-20241106",
-    "react-hot-toast": "^2.5.1",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-hot-toast": "^2.4.1",
     "react-syntax-highlighter": "^15.6.1",
-    "stripe": "^17.5.0",
-    "svix": "^1.45.1",
-    "tailwind-merge": "^2.6.0",
-    "tailwindcss-animate": "^1.0.7",
-    "zustand": "^5.0.2"
+    "svix": "^1.42.0",
+    "zustand": "^5.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
