@@ -125,7 +125,7 @@ async function PricingPage() {
                 {/* CTA */}
                 <div className="flex justify-center">
                   <SignedIn>
-                    <UpgradeButton />
+                    <UpgradeButton userId = {user?.id} />
                   </SignedIn>
 
                   <SignedOut>

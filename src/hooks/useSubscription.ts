@@ -1,14 +1,16 @@
 import { useState } from "react"
-import axios from "axios"
+import { useMutation } from "convex/react"
+import { api } from "../../convex/_generated/api"
+import { useRouter } from "next/navigation"
 
-export const useSubscription = () => {
+export const useSubscription = (userId: string) => {
+    const router = useRouter()
+    const upgrade = useMutation(api.users.upgradeToPro)
     const [isProcessing, setIsProcessing] = useState(false)
-    const onSubscribe =async () => {
+    const onSubscribe = async () => {
         setIsProcessing(true)
-        const response = await axios.get("/api/payment")
-        if (response.data.status === 200) {
-           return (window.location.href = `${response.data.session_url}`)
-        }
+        await upgrade({userId})
+        router.refresh()
         setIsProcessing(false)
     }
     return { onSubscribe, isProcessing }
