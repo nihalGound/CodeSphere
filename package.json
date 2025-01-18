@@ -12,6 +12,8 @@
     "@clerk/nextjs": "^6.6.0",
     "@monaco-editor/react": "^4.6.0",
     "axios": "^1.7.9",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "convex": "^1.17.3",
     "framer-motion": "^11.13.1",
     "lucide-react": "^0.464.0",
@@ -22,6 +24,8 @@
     "react-syntax-highlighter": "^15.6.1",
     "stripe": "^17.5.0",
     "svix": "^1.42.0",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
     "zustand": "^5.0.1"
   },
   "devDependencies": {
